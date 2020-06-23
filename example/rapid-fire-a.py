@@ -3,9 +3,9 @@ import argparse
 import serial
 from time import sleep
 
-parser = argparse.ArgumentParser()
-parser.add_argument('port')
-args = parser.parse_args()
+# parser = argparse.ArgumentParser()
+# parser.add_argument('port')
+# args = parser.parse_args()
 
 def send(msg, duration=0):
     print(msg)

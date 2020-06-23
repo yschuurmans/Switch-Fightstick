@@ -9,6 +9,8 @@ args = parser.parse_args()
 
 def send(msg, duration=0):
     print(msg)
+    if msg == "CLOSE":
+        ser.close()
     ser.write(f'{msg}\r\n'.encode('utf-8'));
     ser.write(f'{msg}\r\n'.encode('utf-8'));
     ser.write(f'{msg}\r\n'.encode('utf-8'));

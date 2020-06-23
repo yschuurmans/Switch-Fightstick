@@ -17,6 +17,7 @@ day = 0
 
 
 def FixDate(): 
+    print("FixDate")
     global month
     global day
     send('HAT TOP', 0.1)
@@ -52,6 +53,7 @@ def FixDate():
         sleep(0.2)
 
 def ClaimReward():
+    print("ClaimReward")
     send('BUTTON A', 0.1)
     sleep(1)
     for i in range(10):
@@ -59,12 +61,16 @@ def ClaimReward():
         sleep(0.5)
 
 def OpenDen():
+    print("OpenDen")
     send('BUTTON A', 0.1)
     sleep(1)
     send('BUTTON A', 0.1)
-    sleep(5)
+    sleep(1)
+    send('BUTTON A', 0.1)
+    sleep(4)
 
 def OpenTime():
+    print("OpenTime")
     send('BUTTON HOME', 0.3)
     sleep(1)
     send('HAT BOTTOM', 0.1)
@@ -91,12 +97,14 @@ def OpenTime():
 
 
 def ExitHome():
+    print("ExitHome")
     for i in range(10):
         send('BUTTON B', 0.1)
         sleep(0.2)
     send('BUTTON HOME', 0.3)
 
 def DenCycle():
+    print("DenCycle")
     OpenDen()
     sleep(1)
     OpenTime()
